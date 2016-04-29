@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniverstity", "ContosoUniverstity\ContosoUniverstity.csproj", "{657B8922-23F3-4B4F-AC35-039C81C7EF86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniverstity.Tests", "ContosoUniverstity.Tests\ContosoUniverstity.Tests.csproj", "{EEDE3983-0731-4BF2-A7C1-B7667A2BF363}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{657B8922-23F3-4B4F-AC35-039C81C7EF86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657B8922-23F3-4B4F-AC35-039C81C7EF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657B8922-23F3-4B4F-AC35-039C81C7EF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657B8922-23F3-4B4F-AC35-039C81C7EF86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEDE3983-0731-4BF2-A7C1-B7667A2BF363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEDE3983-0731-4BF2-A7C1-B7667A2BF363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEDE3983-0731-4BF2-A7C1-B7667A2BF363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEDE3983-0731-4BF2-A7C1-B7667A2BF363}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
