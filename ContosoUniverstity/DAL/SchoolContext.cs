@@ -20,7 +20,7 @@ namespace ContosoUniverstity.DAL
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<OfficeAssignment> OfficeAssignments { get; set; }
-
+        public DbSet<Person> People { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
