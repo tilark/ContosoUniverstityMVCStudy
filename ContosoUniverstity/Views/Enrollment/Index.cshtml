@@ -1,0 +1,134 @@
+﻿@model ContosoUniverstity.ViewModel.StudentEnrollmentData
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grade)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EnrollmentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EnrollmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EnrollmentID })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+
+<table class="table">
+    <tr>
+        <th>
+            LastName
+        </th>
+        <th>
+            FirstName
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Students)
+    {
+        string selectedRow = "";
+        if (item.ID == ViewBag.StudentID)
+        {
+            selectedRow = "success";
+        }
+        <tr class="@selectedRow">
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstMidName)
+            </td>
+            <td>
+                @Html.ActionLink("Select", "Index", new { id = item.ID }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@if (Model.Enrollments != null)
+{
+    int i = 0;
+    <h3>
+        Enrollment Message by Selected Instructor
+    </h3>
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+   
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Grade</th>
+        </tr>
+        
+        @foreach (var item in Model.Enrollments)
+        {
+            string selectedRow = "";
+            if (item.StudentID == ViewBag.StudentID)
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                   bb
+                </td>
+                <td>
+                    @item.Course.Title
+                </td>
+                <td>
+                    @Html.HiddenFor(model => item.EnrollmentID)
+
+                    @Html.TextBox(string.Format("enrollment[{0}].grade",i), item.Grade)
+                    @*@item.Grade*@
+                    @*@Html.EditorFor(model => item.Grade, new { htmlAttributes = new { @class = "form-control" } })*@
+
+
+                </td>
+            </tr>
+            i++;
+        }
+    </table>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+    }
+}

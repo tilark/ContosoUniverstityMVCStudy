@@ -17,7 +17,7 @@ namespace ContosoUniverstity.Models
         [DisplayFormat(NullDisplayText = "No Grade")]
         public Grade? Grade { get; set; }
 
-        public virtual Course Course { get; set; }
-        public virtual Student Student { get; set; }
+        public  Course Course { get; set; }
+        public  Student Student { get; set; }
     }
 }

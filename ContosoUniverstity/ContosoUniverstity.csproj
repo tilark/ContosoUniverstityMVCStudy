@@ -152,9 +152,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\EnrollmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentEnrollmentController.cs" />
     <Compile Include="DAL\DbConfiguration.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
     <Compile Include="DAL\SchoolInitializer cs.cs" />
@@ -177,6 +179,10 @@
     <Compile Include="Migrations\201605010335423_Inheritance.Designer.cs">
       <DependentUpon>201605010335423_Inheritance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605031040186_eagerLoad.cs" />
+    <Compile Include="Migrations\201605031040186_eagerLoad.Designer.cs">
+      <DependentUpon>201605031040186_eagerLoad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Department.cs" />
@@ -189,6 +195,8 @@
     <Compile Include="ViewModel\AssignedCourseData.cs" />
     <Compile Include="ViewModel\EnrollmentDateGroup.cs" />
     <Compile Include="ViewModel\InstructorIndexData.cs" />
+    <Compile Include="ViewModel\StudentEnrollmentData.cs" />
+    <Compile Include="ViewModel\StudentEnrollments.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -247,6 +255,16 @@
     <Content Include="Views\Department\Details.cshtml" />
     <Content Include="Views\Department\Edit.cshtml" />
     <Content Include="Views\Department\Index.cshtml" />
+    <Content Include="Views\StudentEnrollment\Create.cshtml" />
+    <Content Include="Views\StudentEnrollment\Delete.cshtml" />
+    <Content Include="Views\StudentEnrollment\Details.cshtml" />
+    <Content Include="Views\StudentEnrollment\Edit.cshtml" />
+    <Content Include="Views\StudentEnrollment\Index.cshtml" />
+    <Content Include="Views\Enrollment\Create.cshtml" />
+    <Content Include="Views\Enrollment\Delete.cshtml" />
+    <Content Include="Views\Enrollment\Details.cshtml" />
+    <Content Include="Views\Enrollment\Edit.cshtml" />
+    <Content Include="Views\Enrollment\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -268,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605010335423_Inheritance.resx">
       <DependentUpon>201605010335423_Inheritance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605031040186_eagerLoad.resx">
+      <DependentUpon>201605031040186_eagerLoad.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
